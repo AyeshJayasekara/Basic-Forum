@@ -1,0 +1,258 @@
+.background {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 150%;
+  top: 0;
+  left: 0;
+  background: #e8519e;
+  background: -webkit-linear-gradient(bottom, #e8519e, #c77ff2);
+  background: -o-linear-gradient(bottom, #e8519e, #c77ff2);
+  background: -moz-linear-gradient(bottom, #e8519e, #c77ff2);
+  background: linear-gradient(bottom, #e8519e, #c77ff2);
+  opacity: 0.8;
+}
+
+.bg-image{
+  /*width:100%;*/
+  height: auto;
+  z-index:-1;
+  position: absolute;
+  background-size: cover;
+  background-repeat:no-repeat;
+}
+
+.container{
+  margin-top: 20%;
+  display: flex;
+  position: static;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.element{
+  display: flex;
+  width:30%;
+  justify-content: center;
+  margin: 10px;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.element a{
+  text-decoration: none;
+  position: absolute;
+  z-index: -1;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18pt;
+}
+
+/*===view post====*/
+.view-container{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: auto;
+  margin-top:8%;
+}
+
+.view-port{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  width: 60%;
+  height: auto;
+  background-color: white;
+  overflow: scroll;
+  flex-direction: column;
+}
+
+.post{
+  display: flex;
+  width: 90%;
+  /*height: auto;*/
+  background-color: #ccc;
+  border-radius: 10px;
+  padding:  0 20px 0 20px;
+  flex-direction: column;
+}
+
+.post p{
+  padding-top: 0;
+}
+
+.post h2{
+  margin-bottom: 0;
+}
+.post hr{
+  margin: 0;
+  padding: 0;
+}
+.comment{
+  display: flex;
+  width: 90%;
+  height: auto;
+  background-color: #ccc;
+  border-radius: 10px;
+  padding:  0 20px 0 20px;
+  flex-direction: column;
+}
+
+.error-view-port{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 60%;
+  height: auto;
+  background-color: white;
+  flex-direction: column;
+}
+.error{
+  display: flex;
+  width: 90%;
+  height: auto;
+  background-color: #ffa6a6;
+  border-radius: 10px;
+  padding:  0 20px 0 20px;
+  flex-direction: column;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+/*    button    */
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    /*display: inline-block;*/
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    width:120px;
+    height: auto;
+}
+
+
+/*=====media======*/
+
+/*@media (max-width: 992px) {
+  .container{
+    flex-direction: column;
+
+  }
+  .element{
+    width:100%;
+    margin: 10px;
+  }
+  }
+  .view-container{
+    margin-top: 100px;
+  }
+  .view-port{
+    width: 80%;
+  }
+}*/
+
+@media (max-width: 576px) {
+  .container{
+    flex-direction: column;
+
+  }
+  .element{
+    width:100%;
+    margin: 10px;
+  }
+  .view-container{
+    margin-top: 100px;
+    align-items: center;
+    flex-direction: column;
+  }
+  .view-port{
+    width: 80%;
+    height: 650px;
+    display: contents;
+  }
+  .post{
+    width: 100%;
+    background-color: #ccc;
+    border-radius: 5px;
+    padding:  0 10px 0 10px;
+  }
+}
+#regForm {
+  background-color: #ffffff;
+  margin: 100px auto;
+  padding: 40px;
+  width: 70%;
+  min-width: 300px;
+}
+
+/* Style the input fields */
+input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none; 
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+/* Mark the active step: */
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #4CAF50;
+}
+
+
